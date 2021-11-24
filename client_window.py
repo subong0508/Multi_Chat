@@ -52,7 +52,7 @@ class CWindow(QWidget):
         contents = [QLineEdit('127.0.0.1'), QLineEdit(str(PORT)), QLineEdit('익명')]
 
         # 서버 설정 부분
-        self.server_ip, self.port, self.name = self.contents
+        self.server_ip, self.port, self.name = contents
 
         self.btn = QPushButton('Connect server', self)
         self.btn.clicked.connect(self.connect)
