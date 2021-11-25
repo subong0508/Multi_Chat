@@ -143,5 +143,7 @@ class Server(QObject):
         self.recv_signal.emit(msg)
 
         # 스레드 제거
+        mtx.acquire()
         del self.threads[addr]
+        mtx.release()
         return
